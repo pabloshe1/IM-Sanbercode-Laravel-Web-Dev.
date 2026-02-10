@@ -7,3 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [DashboardController::class, 'index']);
 Route::get('/register', [FormController::class, 'register']);
 Route::get('/welcome', [FormController::class, 'welcome']);
+
+use App\Http\Controllers\CategoryController;
+
+Route::resource('category', CategoryController::class);
